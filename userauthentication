@@ -1,0 +1,39 @@
+#!/bin/bash
+
+read -p "enter username :" u
+read -sp "enter password :" p
+un=admin
+pa=Administrator123
+
+if [ $u = $un -a $p = $pa ];
+then
+      echo "Authentiocaiton is succesfull"
+else
+	echo "authentiocation is unsuccefull"
+fi
+
+read -p "enter the character :" c
+
+if [ $c = a -o $c = e -o $c = i -o $c = o -o $c = u ]
+	then
+		echo " character is vowel"
+	else
+		echo " character is not vowel"
+fi
+
+read -p "enter the age :" a
+if [  -z $a ]
+then
+	echo "enter the age:"
+	
+elif [ $a -le 13 ]
+then
+	echo "he/she is child"
+
+elif [ $a -ge 13 -a $a -le 19 ]
+then 
+	echo "he/she is a teenager"
+else
+	echo "he/she is a adult"
+fi
+
