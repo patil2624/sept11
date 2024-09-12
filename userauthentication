@@ -13,12 +13,12 @@ else
 	echo "authentiocation is unsuccefull"
 fi
 
-read -p "enter username :" a
+read -p "enter username :" s
 read -sp "enter password :" b
 
 u1=Developer
 p1=javapython@123
-if [ $a = $u1 -a $p1 = $b ]
+if [ $s = $u1 -a $p1 = $b ]
 then
       echo "Authentiocaiton is succesfull"
 else
@@ -51,7 +51,13 @@ then
 elif [ $a -ge 13 -a $a -le 19 ]
 then 
 	echo "he/she is a teenager"
-else
+elif [ $a -ge 20 -a $a -le 59 ]
+then
 	echo "he/she is a adult"
+elif [ $a -ge 60 ]
+then 
+	echo "he/she is oldage"
+else
+	echo "enter the valide age"
 fi
 
