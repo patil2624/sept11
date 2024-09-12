@@ -4,21 +4,39 @@ read -p "enter username :" u
 read -sp "enter password :" p
 un=admin
 pa=Administrator123
-
-if [ $u = $un -a $p = $pa ];
+#u1=Developer
+#p1=javapython@123
+if [  $u = $un -a $p = $pa ] #-o ( $u = $u1 -a $p1 = $p )  ]
 then
       echo "Authentiocaiton is succesfull"
 else
 	echo "authentiocation is unsuccefull"
 fi
 
-read -p "enter the character :" c
+read -p "enter username :" a
+read -sp "enter password :" b
 
+u1=Developer
+p1=javapython@123
+if [ $a = $u1 -a $p1 = $b ]
+then
+      echo "Authentiocaiton is succesfull"
+else
+        echo "authentiocation is unsuccefull"
+fi
+
+read -p "enter the character :" c
+#d=aeiouAEIOU
+
+#if [ grep-i $c $d ]
 if [ $c = a -o $c = e -o $c = i -o $c = o -o $c = u ]
 	then
 		echo " character is vowel"
+	elif [ $c = O -o $c = A -o $c = E -o $c = I -o $c = U ]
+	then
+		echo " character is vowel"
 	else
-		echo " character is not vowel"
+		echo "characeter is not vowel"
 fi
 
 read -p "enter the age :" a
